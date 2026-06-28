@@ -32,16 +32,16 @@
 
 //console.log(f)---so in easy language we can say that var does not become or not get attached to the global scope in one case that is when it is used inside a function. That's why this line gives me reference error.
 
-// var a = 100;
-// function x(){
-//     var a = 99;
-//     console.log(window.a)
-//     window.a = 1000;
-//     console.log(a)
+var a = 100;
+function x(){
+    var a = 99;
+    console.log(window.a)
+    window.a = 1000;
+    console.log(a)
     
-// }
-// x()
-// console.log(a)
+}
+x()
+console.log(a)
 
 
 
