@@ -99,3 +99,11 @@ var f = outests()
 console.log(f(23))
 
 //The Comma Operator: In JavaScript, writing a, b evaluates both variables from left to right but only returns the last one.
+
+//Step 1: Running the inside firstBefore console.log can display anything, JavaScript must first find out what f() is. So, it runs (triggers) f().Inside your code, f() executes inn().Inside inn(), there is a line: console.log(a, b).Action: The engine immediately prints 67 45 to the screen.
+
+
+// Step 2: The Hand-OffNow, f() is finished running. JavaScript goes back to the outer console.log(...).The outer console.log asks the function: "What data are you handing back to me so I can print it?"The function replies: "I don't have a return keyword, so I have no data for you."Action: Because JavaScript cannot leave an empty space, it automatically substitutes that lack of data with the keyword undefined.
+
+
+// Step 3: The final printThe outer console.log now looks like this: console.log(undefined).Action: It prints undefined to the screen.SummaryYou see two lines on your screen because you have two separate console.log commands executing at two different times:The inner console.log(a,b) prints 67 45.The outer console.log(f()) prints undefined.
